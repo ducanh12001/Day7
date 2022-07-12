@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+<body>
+    <div class="container">
+        <h1>Library</h1>
+        <button id="newBtn">New Book</button>
+        <div class="table-container">
+            <table id="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Pages</th>
+                        <th>Read</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="book-list"></tbody>
+            </table>
+        </div>
+    </div>
+    <div id="addForm">
+        <form id="form" action="">
+            <h3>New Book</h3>
+            <div id='textInput'> 
+                <input type="text" id="title" name="title" placeholder="Title"><br><br>
+                <input type="text" id="author" name="author" placeholder="Author"><br><br>
+                <input type="text" id="pages" name="pages" placeholder="Pages"><br><br>
+            </div>
+            <div id='checkBox'>
+                <label >Read: </label>
+                <input type="checkbox" id="read" name="read" value="yes"><br><br>
+            </div>
+            <button type="button" id="closeBtn">Close</button>
+            <button type="submit" form="form" id="addBtn">Add</button>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</head>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div >
+        Tic Tac Toe
+    </div>
+    <div class="container">
+        <div id="box">
+            <div id="0" class="col square"></div>
+            <div id="1" class="col square"></div>
+            <div id="2" class="col square"></div>
+            <div id="3" class="col square"></div>
+            <div id="4" class="col square"></div>
+            <div id="5" class="col square"></div>
+            <div id="6" class="col square"></div>
+            <div id="7" class="col square"></div>
+            <div id="8" class="col square"></div>
+        </div>
+
+        <div id="controls">
+            <h5>Settings</h5>
+            <div id='playerChoiceContainer'>
+                <input type="radio" class="btn-check" name="playerChoice" id="crossChoice" checked>
+                <label class="btn" for="crossChoice">X</label>
+              
+                <input type="radio" class="btn-check" name="playerChoice" id="noughtChoice" autocomplete="off">
+                <label class="btn" for="noughtChoice">O</label>
+            </div>
+            <select id="gameMode">
+                <option value="PLAYER_MODE">Against player</option>
+                <option value="COMPUTER_MODE">Against computer</option>
+            </select>
+            <button id="startBtn" class="btn">Play</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
