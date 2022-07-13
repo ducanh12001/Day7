@@ -1,115 +1,126 @@
 body {
-    box-sizing: border-box;
     margin: 0;
-    position: relative;
-  }
+}
 
-header {
+* {
     box-sizing: border-box;
-    background-color: #ffde73;
-    margin-bottom: 45px;
-    height: 50px;
-    padding-top: 5px;
 }
 
-nav {
-    width: 380px;
-    margin: 0 auto;
-    position: relative;
+.container {
+    padding: 10px;
 }
 
-.cover {
-    box-sizing: border-box;
-    position: absolute;
-    background-color: rgb(236, 164, 59);
-    height: 45px;
-    width: 98px;
-    border-radius: 5px 5px 0px 0px;
-    text-align: center;
-    padding-top: 8px;
+h1 {
+    margin: 5px;
 }
 
-#covercontact {
-    top: 1px;
-    left: 261px;
+#addForm {
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
-#coverhome {
-    top: 1px;
-    left: 21px;
+#form {
+    display: flex;
 }
 
-#covermenu {
-    top: 1px;
-    left: 141px;
-}
-
-.dripping {
-    height: 45px;
-    width: 98px;
-    position: absolute;
-    bottom: -44px;
-    left: 1px;
-}
-
-.hidden {
-    display: none;
-}
-
-.tab-list {
-    height: 45px;
-    padding-right: 20px;
-}
-
-.tab-list>li {
-    border-top: 1px solid black;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    border-radius: 5px 5px 0px 0px;
-    margin-left: 20px;
-    padding-top: 8px;
-}
-
-.tab-list>li:hover {
-    cursor: pointer;
-}
-
-.content {
-    position: relative;
-    background-color: #ffde73;
-    border-radius: 30px;
-    max-width: 810px;
-    padding: 55px;
-    margin: 0 auto;
-}
-
-footer {
-    box-sizing: border-box;
-    background-color: #ffde73;
-    height: 56px;
-    padding-top: 15px;
-    padding-bottom: 17px;
-    margin-top: 45px;
+#form input[type="text"] {
+    border: 1px solid black;
 }
 
 ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
+    border: 1px solid black;
+}
+
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    list-style-type: none;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+}
+
+ul li:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+ul li:hover {
+    background: #ddd;
+}
+
+ul li.checked {
+    background: #888;
+    color: #fff;
+}
+
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Style the header */
+.header {
+    background-color: #f44336;
+    padding: 30px 40px;
+    color: white;
     text-align: center;
 }
 
-ul>li {
-    flex: 1;
+/* Clear floats after the header */
+.header:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
-.attribution {
-    color: black;
-    font-size: 12px;
-    text-decoration: none;
+/* Style the input */
+input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
 }
 
-.attribution:hover {
-    color: blueviolet;
+/* Style the "Add" button */
+.addBtn {
+    padding: 10px;
+    width: 25%;
+    background: #d9d9d9;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+}
+
+.addBtn:hover {
+    background-color: #bbb;
 }

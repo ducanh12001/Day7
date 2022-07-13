@@ -1,54 +1,30 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <meta charset="utf-8" />
-    <title></title>
+    <meta charset='utf-8'>
+    <title>Todo List</title>
     <link rel="stylesheet" href="style.css">
-</head>
-
 <body>
-    <header>
-        <nav>
-            <div id="coverhome" class="cover">
-                Home
-                <img class="dripping" src="../image/dripping.png" alt="">
-            </div>
-
-            <div id="covermenu" class="cover hidden">
-                Menu
-                <img class="dripping" src="../image/dripping.png" alt="">
-            </div>
-
-            <div id="covercontact" class="cover hidden">
-                Contact
-                <img class="dripping" src="../image/dripping.png" alt="">
-            </div>
-
-            <ul class="tab-list">
-                <li id="home">Home</li>
-                <li id="menu">Menu</li>
-                <li id="contact">Contact</li>
+    <div class="container">
+        <h1>Todo List</h1>
+        <div id="addForm">
+            <form id="form" action="">
+                <input type="text" id="task" name="task" placeholder="Task">
+                <button type="submit" form="form" id="addBtn">Add</button>
+            </form>
+        </div>
+        <div class="list-container">
+            <ul id="list">
+                <li>Hit the gym</li>
+                <li class="checked">Pay bills</li>
+                <li>Meet George</li>
+                <li>Buy eggs</li>
+                <li>Read a book</li>
+                <li>Organize office</li>
             </ul>
-        </nav>
-    </header>
-    <div id="content" class="content">
-
+        </div>
     </div>
-    <footer>
-        <ul>
-          <li>
-            <a class="attribution" href="http://www.freepik.com" title="Freepik">Hive icon made by Freepik - www.flaticon.com</a>
-          </li>
-          <li>
-            <a class="attribution" href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Bee icons made by Smashicons - www.flaticon.com</a>
-          </li>
-          <li>
-            <a class="attribution" href='https://www.freepik.com/vectors/food'>Background image created by dgim-studio - www.freepik.com</a>
-          </li>
-        </ul>
-    </footer>
     <script src="main.js"></script>
+</head>
 </body>
-
 </html>
