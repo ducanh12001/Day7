@@ -1,4 +1,4 @@
-var myNodelist = document.getElementsByTagName("LI");
+const myNodelist = document.getElementsByTagName("li");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
   var span = document.createElement("SPAN");
@@ -8,7 +8,7 @@ for (i = 0; i < myNodelist.length; i++) {
   myNodelist[i].appendChild(span);
 }
 
-var close = document.getElementsByClassName("close");
+const close = document.getElementsByClassName("close");
 var i;
 for (i = 0; i < close.length; i++) {
   close[i].onclick = function () {
@@ -17,12 +17,22 @@ for (i = 0; i < close.length; i++) {
   }
 }
 
-var list = document.querySelector('ul');
+let MyTaskList = [];
+const addForm = document.querySelector('#addForm');
+const taskInput = document.querySelector('#task');
+const list = document.querySelector('#list');
+
 list.addEventListener('click', function (ev) {
   if (ev.target.tagName === 'LI') {
     ev.target.classList.toggle('checked');
   }
 }, false);
+
+
+addForm.addEventListener('submit', function (ev) {
+  ev.preventDefault();
+  newElement()
+})
 
 function newElement() {
   var li = document.createElement("li");
@@ -49,3 +59,4 @@ function newElement() {
     }
   }
 }
+

@@ -43,12 +43,17 @@ document.querySelector("#form").addEventListener('submit', (e) => {
     if (title === '' || author === '' || pages === '') {
         alert("Please enter infomation")
     } else {
-        let i = document.querySelector("#book-list").rows.length + 1;
+        let i = Math.floor(Math.random() * 100);
         let read;
         if (checked === true) {
             read = 'Read'
         } else {
             read = 'Not Read'
+        }
+        for (let j=0; j<getBookStore().length; j++) {
+            if (getBookStore()[j].id === i) {
+                i = Math.floor(Math.random() * 100);
+            }
         }
         const newBook = new Book(i, title, author, pages, read);
         addBookToLibrary(newBook);
@@ -73,7 +78,7 @@ function deleteBook(row) {
 document.querySelector("#book-list").addEventListener('click', (e) => {
     deleteBook(e.target);
     let id = e.target.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.textContent;
-    deleteBookStore(id);
+    deleteBookStore(parseFloat(id));
 })
 
 function getBookStore() {
